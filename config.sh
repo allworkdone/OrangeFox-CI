@@ -3,7 +3,7 @@
 # Device
 export FOX_BRANCH="fox_12.1"
 export DT_LINK="https://github.com/allworkdone/ofox_device_realme_bitra -b fox_12.1"
-
+export DT_PATH="device/realme/bitra"
 export DEVICE="bitra"
 export OEM="realme"
 
