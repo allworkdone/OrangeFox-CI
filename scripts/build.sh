@@ -60,10 +60,39 @@ $EXTRA_CMD
 export ALLOW_MISSING_DEPENDENCIES=true
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 export LC_ALL="C"
+export OF_USE_GREEN_LED=0
+export FOX_ENABLE_APP_MANAGER=0
+export TW_DEFAULT_LANGUAGE="en"
+export ALLOW_MISSING_DEPENDENCIES=true
+export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
+export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
+export OF_NO_MIUI_PATCH_WARNING=1
+export FOX_USE_BASH_SHELL=1
+export FOX_ASH_IS_BASH=1
+export FOX_USE_TAR_BINARY=1
+export FOX_USE_SED_BINARY=1
+export FOX_USE_XZ_UTILS=1
+export OF_ENABLE_LPTOOLS=1
+export OF_QUICK_BACKUP_LIST="/boot;/data;"
+export OF_PATCH_AVB20=1
+export OF_MAINTAINER="allworkdone"
+export FOX_DELETE_AROMAFM=1
+export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
+export OF_SCREEN_H=2400
+export OF_STATUS_H=100
+export OF_STATUS_INDENT_LEFT=155
+export OF_STATUS_INDENT_RIGHT=48
+export OF_HIDE_NOTCH=1
+export OF_CLOCK_POS=0
+cd $SYNC_PATH/vendor/recovery/FoxFiles
+rm Magisk.zip
+wget https://github.com/topjohnwu/Magisk/releases/download/v25.2/Magisk-v25.2.apk
+mv Magisk-v25.2.apk Magisk.zip
+cd ../../..
 
 # Default Build Type
 if [ -z "$FOX_BUILD_TYPE" ]; then
-    export FOX_BUILD_TYPE="Unofficial-CI"
+    export FOX_BUILD_TYPE="R12.1-A13"
 fi
 
 # Default Maintainer's Name
